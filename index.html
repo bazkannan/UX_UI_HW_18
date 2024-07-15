@@ -32,6 +32,16 @@
       $("#draggable").draggable();
     });
   </script>
+  <script>
+    const menuToggle = document.getElementById('mobile-menu');
+    const navMenu = document.querySelector('.nav-menu'); 
+
+    menuToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('active'); 
+
+      menuToggle.classList.toggle('active');
+    }); 
+  </script>
 </head>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -45,7 +55,8 @@
       <div class="logo">
         <a href="#homeSection">B.K.</a>
       </div>
-      <ul>
+      <div class="menu-toggle" id="mobile-menu">
+      <ul class="nav-menu">
         <li class="navMenuItems"><a href="#homeSection">HOME</a></li>
         <li class="navMenuItems"><a href="#aboutSection">ABOUT ME</a></li>
         <li class="navMenuItems"><a href="#caseStudiesSection">CASE STUDIES</a></li>
@@ -56,6 +67,7 @@
           <span class="slider round"></span>
         </label> -->
       </ul>
+      </div>
     </nav>
   </header>
   <main>
